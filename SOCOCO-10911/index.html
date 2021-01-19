@@ -1,0 +1,22 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sococo Test</title>
+</head>
+
+<body>
+  <h1>This is a Sococo Test Site</h1>
+  <h3 id="result"></h3>
+  <script>
+    const elem = document.getElementById('result');
+    if (window.opener) {
+      window.opener.location = 'https://www.google.com';
+      elem.innerHTML = '<span style="color: red;">Your site was vulnerable.</span>';
+    } else {
+      elem.innerHTML = '<span style="color: green;">Your site was safe.</span>';
+    }
+  </script>
+</body>
+
+</html>
